@@ -7,4 +7,58 @@
   </parent>
   <artifactId>webecom</artifactId>
   <packaging>war</packaging>
+  
+  <dependencies>
+    <dependency>
+      <groupId>com.ecom</groupId>
+      <artifactId>common</artifactId>
+      <version>0.0.1-SNAPSHOT</version>
+      </dependency>
+      
+      <dependency>
+      <groupId>com.ecom</groupId>
+      <artifactId>service</artifactId>
+      <version>0.0.1-SNAPSHOT</version>
+      </dependency>
+      
+      <dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>2.7.5</version>
+		</dependency>
+      
+      <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>3.1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet.jsp</groupId>
+            <artifactId>javax.servlet.jsp-api</artifactId>
+            <version>2.3.1</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jstl</artifactId>
+            <version>1.2</version>
+        </dependency>
+     <dependency>
+    <groupId>com.fasterxml.jackson.core</groupId>
+    <artifactId>jackson-core</artifactId>
+    <version>2.7.5</version>
+</dependency>
+
+
+
+	<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-annotations -->
+<dependency>
+    <groupId>com.fasterxml.jackson.core</groupId>
+    <artifactId>jackson-annotations</artifactId>
+    <version>2.7.5</version>
+</dependency>
+      
+  </dependencies>
+  <build>
+    <finalName>Ecomweb</finalName>
+  </build>
 </project>

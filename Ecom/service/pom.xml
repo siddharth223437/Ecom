@@ -6,4 +6,18 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <artifactId>service</artifactId>
+  <packaging>jar</packaging>
+  
+  <dependencies>
+  	<dependency>
+  		<groupId>com.ecom</groupId>
+  		<artifactId>common</artifactId>
+  		<version>0.0.1-SNAPSHOT</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>com.ecom</groupId>
+  		<artifactId>business</artifactId>
+  		<version>0.0.1-SNAPSHOT</version>
+  	</dependency>
+  </dependencies>
 </project>

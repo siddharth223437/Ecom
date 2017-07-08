@@ -4,4 +4,60 @@
   <artifactId>Ecom</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
+  <modules>
+  	<module>common</module>
+  	<module>business</module>
+  	<module>webecom</module>
+  	<module>service</module>
+  	<module>ecomear</module>
+  </modules>
+  <properties>
+        <spring.version>4.3.0.RELEASE</spring.version>
+        <hibernate.version>4.3.7.Final</hibernate.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+    
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.2</version>
+                    <configuration>
+                        <verbose>true</verbose>
+                        <source>1.8</source>
+                        <target>1.8</target>
+                        <showWarnings>true</showWarnings>
+                    </configuration>
+                </plugin>
+                
+                 <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-war-plugin</artifactId>
+                    <version>2.4</version>
+                    <!-- <configuration>
+                        <warName>hotelR</warName>
+                    </configuration> -->
+                </plugin>
+                
+                <plugin>
+               <groupId>org.apache.maven.plugins</groupId>
+               <artifactId>maven-ear-plugin</artifactId>
+               <version>2.10.1</version>
+               <configuration>
+                  <version>7</version>
+                  <modules>
+                     <webModule>
+                        <groupId>com.ecom</groupId>
+                        <artifactId>webecom</artifactId>
+                        <contextRoot>/</contextRoot>
+                     </webModule>
+                  </modules>
+               </configuration>
+            </plugin>
+               
+            </plugins>
+        </pluginManagement>
+    </build>
 </project>
