@@ -5,12 +5,14 @@
     }
     
     /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
-    .row.content {height: 450px}
+    .row.content {height: 450px;
+     padding-top: 0px;
+    }
     
     /* Set gray background color and 100% height */
     .sidenav {
-      padding-top: 20px;
-      background-color: #f1f1f1;
+      padding-top: 40px;
+      
       height: 100%;
     }
     
@@ -19,6 +21,13 @@
       background-color: #555;
       color: white;
       padding: 15px;
+    }
+    /*Set jumbotron seo that side nav can be adjusted */
+    .jumbotron{
+    	background-color: A4A4A4;
+    			margin-bottom: 0;
+    		
+    		
     }
     
     /* On small screens, set height to 'auto' for sidenav and grid */
