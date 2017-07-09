@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>E-Com here</title>
+<title>E-Com</title>
 </head>
 <body>
 <nav class="navbar navbar-inverse">
@@ -34,42 +34,37 @@
 </nav>
 
 <div class="container">
-	<div class="page-header col-md-10">
-            <h1>All Products</h1>
-
-            <p class="lead">Checkout all the awesome products available now!</p>
-        </div>
- </div>
- 
- <div class="container">       
-	<div class="row">
-		<div class="col-md-10">
-			<table class="table table-striped table-hover">
-				<thead>
-				<tr class="bg-success">	
-					<th>Photo Thumb</th>
-                		<th>Product Name</th>
-                		<th>Category</th>
-                		<th>Condition</th>
-                		<th>Price</th>
-                		<th></th>
-				</tr>
-						</thead>
-				<c:forEach items="${products}" var="pList">
-					<tr>
-						<td>Image File</td>
-						<td>${pList.productName}</td>
-						<td>${pList.productCategory}</td>
-						<td>${pList.productCondition}</td>
-						<td>${pList.productPrice}</td>
-						<td><a href="${pageContext.request.contextPath}/viewproducts/${pList.productId}"><span class="glyphicon glyphicon-info-sign"></span></a></td>
-					</tr>
-				</c:forEach>
-			</table>
+		<div class="page-header">
+			<h1>Product Detail</h1>
+            <p class="lead">Here is the detail information of the product!</p>
 		</div>
-	</div>
 </div>
 
+<div class="container">
+	<div class="row">
+		<div class="col-md-5">
+			<img src="<c:url value="/assets/images/iphone.jpg" /> " alt="image" style="width:100%"/> 
+	    </div>
+<br>
+<div class="col-md-7">
+	<h3>${viewProduct.productName}</h3>
+	<p>${viewProduct.productDescription}</p>
+	<p>
+       <strong>Manufacturer</strong> : ${viewProduct.productManufacturer}
+    </p>
+    <p>
+      <strong>Category</strong> : ${viewProduct.productCategory}
+    </p>
+    <p>
+       <strong>Condition</strong> : ${viewProduct.productCondition}
+     </p>
+      <h4>${viewProduct.productPrice} USD</h4>
+
+       <br>
+</div>
+</div>
+
+</div>
 </body>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

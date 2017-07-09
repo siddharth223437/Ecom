@@ -24,4 +24,10 @@ public class ProductsServiceImpl implements ProductsService {
 		return productsDao.getAllProducts();
 	}
 
+	@Override
+	public Products getProductById(int pid) {
+		logger.info("Inf get Produvt By Id Service");
+		return productsDao.getProductById(pid);
+	}
+
 }

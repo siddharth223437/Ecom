@@ -7,5 +7,6 @@ import com.ecom.common.vo.Products;
 public interface ProductsService  {
 	
 	public List<Products> getAllProducts();
+	public Products getProductById(int pid);
 
 }

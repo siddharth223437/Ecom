@@ -36,4 +36,15 @@ public class ProductsDaoImpl implements ProductsDao {
 		return prodList;
 	}
 
+	@Override
+	public Products getProductById(int pid) {
+		Session session = sessionFactory.getCurrentSession();
+		Query query = session.createQuery("FROM Products p WHERE p.productId = ?");
+		query.setParameter(0, pid);
+		logger.info("get Result by Product Id");
+		Products prod = (Products) query.uniqueResult();
+		logger.info("After geting result in getProduct"+" "+prod.getProductName());
+		return prod;
+	}
+
 }
