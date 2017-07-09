@@ -6,10 +6,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Sid Store</title>
+<title>E-Com here</title>
 </head>
 <body>
-
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -34,51 +33,39 @@
   </div>
 </nav>
 
-<div class="jumbotron ">
-	<div class="container">
-		<div class="row jumbo text-center">
-			<h1>Hello, world!</h1>
-		<p>...</p>
-		<p><a class="btn btn-primary btn-lg">Learn more</a></p>
+<div class="container">
+	<div class="page-header">
+            <h1>All Products</h1>
+
+            <p class="lead">Checkout all the awesome products available now!</p>
+        </div>
+	<div class="row">
+		<div class="col-md-10">
+			<table class="table table-striped table-hover">
+				<tr class="bg-success">	
+					<th>Photo Thumb</th>
+                		<th>Product Name</th>
+                		<th>Category</th>
+                		<th>Condition</th>
+                		<th>Price</th>
+				</tr>
+				<c:forEach items="${products}" var="pList">
+					<tr>
+						<td>Image File</td>
+						<td>${pList.productName}</td>
+						<td>${pList.productCategory}</td>
+						<td>${pList.productCondition}</td>
+						<td>${pList.productPrice}</td>
+					</tr>
+				</c:forEach>
+			</table>
 		</div>
 	</div>
 </div>
-  
-<div class="container-fluid text-center">    
-  <div class="row content">
-    <div class="col-sm-2 sidenav">
-      <p><a href="#">Link</a></p>
-      <p><a href="#">Link</a></p>
-      <p><a href="#">Link</a></p>
-    </div>
-    <div class="col-sm-8 text-left "> 
-      <h1>Welcome</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      <hr>
-      <h3>Test</h3>
-      <p>Lorem ipsum...</p>
-    </div>
-    <div class="col-sm-2 sidenav">
-      <div class="well">
-        <p>ADS</p>
-      </div>
-      <div class="well">
-        <p>ADS</p>
-      </div>
-    </div>
-  </div>
-</div>
 
-<footer class="container-fluid text-center">
-  <p>Footer Text</p>
-</footer>
-	
 </body>
-<!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link href="${pageContext.request.contextPath}/assets/css/home.css" rel="stylesheet" >
-  
-
 </html>

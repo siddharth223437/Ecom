@@ -19,6 +19,8 @@ import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.JstlView;
+
+import com.ecom.common.vo.Products;
 @Configuration
 @EnableWebMvc
 @EnableTransactionManagement
@@ -55,7 +57,7 @@ public class SpringConfig extends WebMvcConfigurerAdapter {
 	@Bean(name="sessionFactory")
 	public SessionFactory getSessionFactory(DataSource dataSource){
 		LocalSessionFactoryBuilder sessionBuilder = new LocalSessionFactoryBuilder(dataSource);
-		//sessionBuilder.addAnnotatedClass(Users.class);
+		sessionBuilder.addAnnotatedClass(Products.class);
 		sessionBuilder.addProperties(getHibernateProperties());
 		return sessionBuilder.buildSessionFactory();
 	}
