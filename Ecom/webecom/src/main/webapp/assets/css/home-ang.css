@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+.card{
+	width: 60%;
+}
+
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #f5f5f5;
+}
+
+.row.content{
+	height: 1500px;
+}
+
+sidenav{
+	height: 100%;
+}
+
+.cardpad{
+	padding-bottom: 6%;
+	
+	}
+	html {
+  position: relative;
+  min-height: 100%;
+}

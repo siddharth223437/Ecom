@@ -1,5 +1,6 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -10,68 +11,59 @@
 </head>
 <body>
 
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-      <a class="navbar-brand" href="#">E-Com</a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="${pageContext.request.contextPath}/productlist">Products</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
 
-<div class="jumbotron ">
-	<div class="container">
-		<div class="row jumbo text-center">
-			<h1>Hello, world!</h1>
-		<p>...</p>
-		<p><a class="btn btn-primary btn-lg">Learn more</a></p>
+<div class="container">
+	<div class="page-header">
+            <h4>Customer Registration</h4>
+
+            <p class="lead">Fill the below information to add Customer:</p>
+        </div>
+	<div class="row">
+		<div class="col-sm-6">
+		<form:form action="${pageContext.request.contextPath}/signup" method="post" modelAttribute="user">
+			
+		<div class="form-group">
+            <label for="firstname">Fisrt Name</label>
+            <form:input path="firstName" id="customerfirstName" class="form-Control"/>
+        </div>
+        <div class="form-group">
+            <label for="lastname">Last Name</label>
+            <form:input path="lastName" id="customerlastName" class="form-Control"/>
+        </div>
+       
+        <%--  <div class="form-group">
+            <label for="city">Country</label>
+            <form:select path="customerCountry" class="form-Control">
+            <form:option value="NONE" label="--SELECT--"></form:option>
+            <form:options items="${listRess}" />
+            </form:select>
+        </div>
+        <div class="form-group">
+            <label for="state">State</label>
+            <form:select path="customerState" class="form-Control">
+            <form:option value="NONE" label="--SELECT--"></form:option>
+            <form:options items="${liststate}" />
+            </form:select>
+        </div> --%>
+        <div class="form-group">
+            <label for=customerUserName>Username</label>
+            <form:input path="username" id="customerUserName" class="form-Control"/>
+        </div>
+        <div class="form-group">
+            <label for=customerPassword>Password</label>
+            <form:input path="password" id="customerPassword" class="form-Control"/>
+        </div>
+        <br><br>
+        <input type="submit" value="submit" class="btn btn-default"/>
+		</form:form>
+		
 		</div>
+	
 	</div>
-</div>
-  
-<div class="container-fluid text-center">    
-  <div class="row content">
-    <div class="col-sm-2 sidenav">
-      <p><a href="#">Link</a></p>
-      <p><a href="#">Link</a></p>
-      <p><a href="#">Link</a></p>
-    </div>
-    <div class="col-sm-8 text-left "> 
-      <h1>Welcome</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      <hr>
-      <h3>Test</h3>
-      <p>Lorem ipsum...</p>
-    </div>
-    <div class="col-sm-2 sidenav">
-      <div class="well">
-        <p>ADS</p>
-      </div>
-      <div class="well">
-        <p>ADS</p>
-      </div>
-    </div>
-  </div>
+
 </div>
 
-<footer class="container-fluid text-center">
-  <p>Footer Text</p>
-</footer>
+
 	
 </body>
 <!-- Latest compiled and minified CSS -->
